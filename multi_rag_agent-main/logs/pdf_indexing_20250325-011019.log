@@ -1,0 +1,11 @@
+2025-03-25 01:10:19,434 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-03-25 01:10:19,434 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2025-03-25 01:10:23,120 - pdf_indexer - INFO - Connecting to Weaviate at http://localhost:8765
+2025-03-25 01:10:23,121 - pdf_indexer - ERROR - Failed to connect to Weaviate: Client.__init__() got an unexpected keyword argument 'url'
+2025-03-25 01:10:23,121 - pdf_indexer - ERROR - Error indexing PDFs: Client.__init__() got an unexpected keyword argument 'url'
+Traceback (most recent call last):
+  File "/Users/rt59tu/Desktop/daniel_multi_rag/multi_rag_agent-main/index_pdfs.py", line 491, in main
+    client = setup_weaviate_client()
+  File "/Users/rt59tu/Desktop/daniel_multi_rag/multi_rag_agent-main/index_pdfs.py", line 202, in setup_weaviate_client
+    client = weaviate.Client(url=url)
+TypeError: Client.__init__() got an unexpected keyword argument 'url'

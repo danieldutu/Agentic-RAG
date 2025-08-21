@@ -1,0 +1,11 @@
+2025-03-25 00:00:53,552 - root - INFO - Logging initialized with level INFO
+2025-03-25 00:00:53,553 - root - INFO - Log file: logs/arag-20250325-000053.log
+2025-03-25 00:00:53,553 - arag - INFO - [Session: 4e042f2f-e35a-4d53-b4e4-c03e608bb512] Processing query: What does the Google Code of Conduct say?
+2025-03-25 00:00:53,575 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-03-25 00:00:53,576 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-25 00:00:57,161 - arag.core.vector_db - INFO - Initialized sentence-transformers model
+2025-03-25 00:00:57,161 - arag.core.vector_db - INFO - Vector DB client initialized with base URL: http://localhost:8765
+2025-03-25 00:00:57,161 - arag.core.vector_db - ERROR - Failed to initialize Weaviate client: Client.__init__() got an unexpected keyword argument 'url'
+2025-03-25 00:00:57,161 - arag.core.ai_client - INFO - Google AI client initialized
+2025-03-25 00:00:57,161 - arag.core.vector_db - INFO - Performing health check for vector DB type: weaviate
+2025-03-25 00:00:57,162 - arag - ERROR - [Session: 4e042f2f-e35a-4d53-b4e4-c03e608bb512] Vector database is not reachable

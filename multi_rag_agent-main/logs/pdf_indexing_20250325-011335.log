@@ -1,0 +1,13 @@
+2025-03-25 01:13:35,924 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-03-25 01:13:35,924 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5
+2025-03-25 01:13:40,595 - pdf_indexer - INFO - Connecting to Weaviate at http://localhost:8765
+2025-03-25 01:13:40,596 - pdf_indexer - ERROR - Failed to connect to Weaviate: ConnectionParams.from_url() missing 1 required positional argument: 'grpc_port'
+2025-03-25 01:13:40,596 - pdf_indexer - ERROR - Error indexing PDFs: ConnectionParams.from_url() missing 1 required positional argument: 'grpc_port'
+Traceback (most recent call last):
+  File "/Users/rt59tu/Desktop/daniel_multi_rag/multi_rag_agent-main/index_pdfs.py", line 556, in main
+    client = setup_weaviate_client()
+  File "/Users/rt59tu/Desktop/daniel_multi_rag/multi_rag_agent-main/index_pdfs.py", line 345, in setup_weaviate_client
+    raise e
+  File "/Users/rt59tu/Desktop/daniel_multi_rag/multi_rag_agent-main/index_pdfs.py", line 271, in setup_weaviate_client
+    connection_params=weaviate.connect.ConnectionParams.from_url(
+TypeError: ConnectionParams.from_url() missing 1 required positional argument: 'grpc_port'

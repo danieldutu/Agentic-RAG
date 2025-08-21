@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: arag
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: weaviate-client==3.25.2
+Requires-Dist: sentence-transformers==3.4.1
+Requires-Dist: PyPDF2==3.0.1
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: numpy==2.2.4
+Requires-Dist: google-generativeai==0.8.4
+Requires-Dist: langchain==0.3.21
+Requires-Dist: langchain-core==0.3.47
+Requires-Dist: langchain-text-splitters==0.3.7
+Requires-Dist: pydantic==2.10.6
+Requires-Dist: pydantic-settings==2.8.1
+Dynamic: requires-dist

@@ -1,0 +1,2 @@
+2025-03-25 01:09:39,108 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-03-25 01:09:39,108 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en-v1.5

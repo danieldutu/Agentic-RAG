@@ -1,0 +1,207 @@
+2025-03-25 00:16:31,611 - root - INFO - Logging initialized with level INFO
+2025-03-25 00:16:31,611 - root - INFO - Log file: logs/arag-20250325-001631.log
+2025-03-25 00:16:31,611 - arag - INFO - [Session: 81168b99-0b07-4b4b-be71-dd3fde7fd14b] Processing query: What does the Google Code of Conduct say?
+2025-03-25 00:16:31,629 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-03-25 00:16:31,629 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-large-en
+2025-03-25 00:16:34,511 - arag.core.vector_db - INFO - Initialized sentence-transformers model
+2025-03-25 00:16:34,511 - arag.core.vector_db - INFO - Vector DB client initialized with base URL: http://localhost:8765
+2025-03-25 00:16:34,577 - httpx - INFO - HTTP Request: GET http://localhost:8765/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2025-03-25 00:16:34,589 - httpx - INFO - HTTP Request: GET http://localhost:8765/v1/meta "HTTP/1.1 200 OK"
+2025-03-25 00:16:34,717 - httpx - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-03-25 00:16:34,757 - arag.core.vector_db - INFO - Connected to Weaviate at http://localhost:8765
+2025-03-25 00:16:34,757 - arag.core.ai_client - INFO - Google AI client initialized
+2025-03-25 00:16:34,757 - arag.core.vector_db - INFO - Performing health check for vector DB type: weaviate
+2025-03-25 00:16:34,760 - httpx - INFO - HTTP Request: GET http://localhost:8765/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-03-25 00:16:34,761 - arag.agents.query_rewriter - INFO - Query Rewriter Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.knowledge_extractor - INFO - Knowledge Extractor Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.missing_info - INFO - Missing Info Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.knowledge_gaps - INFO - Knowledge Gaps Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.decision - INFO - Decision Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.answer - INFO - Answer Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.evaluator - INFO - Evaluator Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.improver - INFO - Improver Agent initialized
+2025-03-25 00:16:34,761 - arag.agents.process - INFO - Process Agent initialized
+2025-03-25 00:16:34,761 - arag.core.orchestrator - INFO - Orchestrator initialized with all agents
+2025-03-25 00:16:34,761 - arag.core.memory - INFO - Memory initialized for session 81168b99-0b07-4b4b-be71-dd3fde7fd14b
+2025-03-25 00:16:34,761 - arag.agents.process - INFO - Generating process narrative for stage: initialization
+2025-03-25 00:16:35,779 - arag.core.ai_client - INFO - Generated process narrative for stage: initialization
+2025-03-25 00:16:35,779 - arag.agents.process - INFO - Generated process narrative for stage: initialization
+2025-03-25 00:16:35,779 - arag.core.orchestrator - INFO - Starting iteration 1/3
+2025-03-25 00:16:35,779 - arag.core.orchestrator - INFO - Running Query Rewriter Agent
+2025-03-25 00:16:35,779 - arag.agents.query_rewriter - INFO - Rewriting query: What does the Google Code of Conduct say?
+2025-03-25 00:16:36,536 - arag.core.ai_client - INFO - Generated 3 query variations
+2025-03-25 00:16:36,536 - arag.agents.query_rewriter - INFO - Generated 3 query variations
+2025-03-25 00:16:36,536 - arag.agents.process - INFO - Generating process narrative for stage: query_rewriting
+2025-03-25 00:16:37,390 - arag.core.ai_client - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:16:37,390 - arag.agents.process - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:16:37,390 - arag.core.orchestrator - INFO - Query rewriting completed in 1.61s
+2025-03-25 00:16:37,391 - arag.core.orchestrator - INFO - Running Document Retrieval
+2025-03-25 00:16:37,391 - arag.core.vector_db - INFO - Batch querying vector DB with 3 queries
+2025-03-25 00:16:37,391 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct policy...
+2025-03-25 00:16:37,630 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:16:37,631 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:16:37,638 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:16:37,638 - arag.core.vector_db - INFO - Querying vector DB for: Google employee conduct guidelines...
+2025-03-25 00:16:37,718 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:16:37,719 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:16:37,724 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:16:37,724 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct rules and regulations...
+2025-03-25 00:16:37,810 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:16:37,810 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:16:37,815 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:16:37,815 - arag.core.vector_db - INFO - Batch query returned 14 unique documents
+2025-03-25 00:16:37,815 - arag.agents.process - INFO - Generating process narrative for stage: document_retrieval
+2025-03-25 00:16:38,531 - arag.core.ai_client - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:16:38,532 - arag.agents.process - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:16:38,532 - arag.core.orchestrator - INFO - Document retrieval completed in 1.14s
+2025-03-25 00:16:38,532 - arag.core.orchestrator - INFO - Running Knowledge Agent
+2025-03-25 00:16:38,532 - arag.agents.knowledge_extractor - INFO - Extracting knowledge from 14 document chunks
+2025-03-25 00:16:41,144 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:16:46,916 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:16:54,188 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:16:56,258 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:06,880 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:12,824 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:20,944 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:28,901 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:35,452 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:41,219 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:43,710 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:50,876 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:17:58,503 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:00,339 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:00,340 - arag.agents.knowledge_extractor - INFO - Extracted 0 knowledge items
+2025-03-25 00:18:00,340 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_extraction
+2025-03-25 00:18:01,158 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:18:01,158 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:18:01,158 - arag.core.orchestrator - INFO - Knowledge extraction completed in 82.63s
+2025-03-25 00:18:01,159 - arag.core.orchestrator - INFO - Running Missing Info Agent
+2025-03-25 00:18:01,159 - arag.agents.missing_info - INFO - Identifying missing information in 0 knowledge items
+2025-03-25 00:18:02,900 - arag.core.ai_client - WARNING - Failed to parse missing info identification result as JSON
+2025-03-25 00:18:02,900 - arag.agents.missing_info - INFO - Identified 0 missing information references
+2025-03-25 00:18:02,900 - arag.agents.process - INFO - Generating process narrative for stage: missing_info
+2025-03-25 00:18:03,716 - arag.core.ai_client - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:18:03,717 - arag.agents.process - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:18:03,717 - arag.core.orchestrator - INFO - Missing info identification completed in 2.56s
+2025-03-25 00:18:03,717 - arag.core.orchestrator - INFO - Running Knowledge Gaps Agent
+2025-03-25 00:18:03,717 - arag.agents.knowledge_gaps - INFO - Identifying knowledge gaps in 0 knowledge items
+2025-03-25 00:18:10,578 - arag.core.ai_client - WARNING - Failed to parse knowledge gaps identification result as JSON
+2025-03-25 00:18:10,579 - arag.agents.knowledge_gaps - INFO - Identified 0 knowledge gaps with completeness score 0
+2025-03-25 00:18:10,579 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_gaps
+2025-03-25 00:18:11,396 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:18:11,396 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:18:11,396 - arag.core.orchestrator - INFO - Knowledge gap analysis completed in 7.68s
+2025-03-25 00:18:11,396 - arag.core.orchestrator - INFO - Running Decision Agent
+2025-03-25 00:18:11,396 - arag.agents.decision - INFO - Making decision at iteration 1/3
+2025-03-25 00:18:12,830 - arag.core.ai_client - WARNING - Failed to parse decision making result as JSON
+2025-03-25 00:18:12,830 - arag.agents.decision - INFO - Decision: continue with confidence 50
+2025-03-25 00:18:12,830 - arag.agents.process - INFO - Generating process narrative for stage: decision
+2025-03-25 00:18:13,595 - arag.core.ai_client - INFO - Generated process narrative for stage: decision
+2025-03-25 00:18:13,595 - arag.agents.process - INFO - Generated process narrative for stage: decision
+2025-03-25 00:18:13,595 - arag.core.orchestrator - INFO - Decision making completed in 2.20s
+2025-03-25 00:18:13,595 - arag.core.orchestrator - INFO - Starting iteration 2/3
+2025-03-25 00:18:13,596 - arag.core.orchestrator - INFO - Running Query Rewriter Agent
+2025-03-25 00:18:13,596 - arag.agents.query_rewriter - INFO - Rewriting query: What does the Google Code of Conduct say?
+2025-03-25 00:18:14,290 - arag.core.ai_client - INFO - Generated 3 query variations
+2025-03-25 00:18:14,290 - arag.agents.query_rewriter - INFO - Generated 3 query variations
+2025-03-25 00:18:14,290 - arag.agents.process - INFO - Generating process narrative for stage: query_rewriting
+2025-03-25 00:18:15,089 - arag.core.ai_client - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:18:15,089 - arag.agents.process - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:18:15,089 - arag.core.orchestrator - INFO - Query rewriting completed in 1.49s
+2025-03-25 00:18:15,089 - arag.core.orchestrator - INFO - Running Document Retrieval
+2025-03-25 00:18:15,089 - arag.core.vector_db - INFO - Batch querying vector DB with 3 queries
+2025-03-25 00:18:15,089 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct policy...
+2025-03-25 00:18:15,175 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:18:15,175 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:18:15,180 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:18:15,180 - arag.core.vector_db - INFO - Querying vector DB for: Google employee conduct regulations...
+2025-03-25 00:18:15,207 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:18:15,207 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:18:15,211 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:18:15,211 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct guidelines...
+2025-03-25 00:18:15,237 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:18:15,237 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:18:15,243 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:18:15,243 - arag.core.vector_db - INFO - Batch query returned 12 unique documents
+2025-03-25 00:18:15,243 - arag.agents.process - INFO - Generating process narrative for stage: document_retrieval
+2025-03-25 00:18:16,006 - arag.core.ai_client - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:18:16,006 - arag.agents.process - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:18:16,006 - arag.core.orchestrator - INFO - Document retrieval completed in 0.92s
+2025-03-25 00:18:16,006 - arag.core.orchestrator - INFO - Running Knowledge Agent
+2025-03-25 00:18:16,006 - arag.agents.knowledge_extractor - INFO - Extracting knowledge from 12 document chunks
+2025-03-25 00:18:18,727 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:23,381 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:28,909 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:30,996 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:40,006 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:42,530 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:50,603 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:18:56,356 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:03,934 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:09,570 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:15,717 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:23,053 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:23,053 - arag.agents.knowledge_extractor - INFO - Extracted 0 knowledge items
+2025-03-25 00:19:23,053 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_extraction
+2025-03-25 00:19:23,836 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:19:23,837 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:19:23,837 - arag.core.orchestrator - INFO - Knowledge extraction completed in 67.83s
+2025-03-25 00:19:23,837 - arag.core.orchestrator - INFO - Running Missing Info Agent
+2025-03-25 00:19:23,837 - arag.agents.missing_info - INFO - Identifying missing information in 0 knowledge items
+2025-03-25 00:19:25,114 - arag.core.ai_client - WARNING - Failed to parse missing info identification result as JSON
+2025-03-25 00:19:25,115 - arag.agents.missing_info - INFO - Identified 0 missing information references
+2025-03-25 00:19:25,115 - arag.agents.process - INFO - Generating process narrative for stage: missing_info
+2025-03-25 00:19:25,875 - arag.core.ai_client - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:19:25,875 - arag.agents.process - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:19:25,875 - arag.core.orchestrator - INFO - Missing info identification completed in 2.04s
+2025-03-25 00:19:25,876 - arag.core.orchestrator - INFO - Running Knowledge Gaps Agent
+2025-03-25 00:19:25,876 - arag.agents.knowledge_gaps - INFO - Identifying knowledge gaps in 0 knowledge items
+2025-03-25 00:19:32,660 - arag.core.ai_client - WARNING - Failed to parse knowledge gaps identification result as JSON
+2025-03-25 00:19:32,660 - arag.agents.knowledge_gaps - INFO - Identified 0 knowledge gaps with completeness score 0
+2025-03-25 00:19:32,660 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_gaps
+2025-03-25 00:19:33,437 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:19:33,437 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:19:33,437 - arag.core.orchestrator - INFO - Knowledge gap analysis completed in 7.56s
+2025-03-25 00:19:33,437 - arag.core.orchestrator - INFO - Running Decision Agent
+2025-03-25 00:19:33,437 - arag.agents.decision - INFO - Making decision at iteration 2/3
+2025-03-25 00:19:34,665 - arag.core.ai_client - WARNING - Failed to parse decision making result as JSON
+2025-03-25 00:19:34,665 - arag.agents.decision - INFO - Decision: continue with confidence 50
+2025-03-25 00:19:34,665 - arag.agents.process - INFO - Generating process narrative for stage: decision
+2025-03-25 00:19:35,503 - arag.core.ai_client - INFO - Generated process narrative for stage: decision
+2025-03-25 00:19:35,503 - arag.agents.process - INFO - Generated process narrative for stage: decision
+2025-03-25 00:19:35,503 - arag.core.orchestrator - INFO - Decision making completed in 2.07s
+2025-03-25 00:19:35,503 - arag.core.orchestrator - INFO - Starting iteration 3/3
+2025-03-25 00:19:35,503 - arag.core.orchestrator - INFO - Running Query Rewriter Agent
+2025-03-25 00:19:35,503 - arag.agents.query_rewriter - INFO - Rewriting query: What does the Google Code of Conduct say?
+2025-03-25 00:19:36,162 - arag.core.ai_client - INFO - Generated 3 query variations
+2025-03-25 00:19:36,162 - arag.agents.query_rewriter - INFO - Generated 3 query variations
+2025-03-25 00:19:36,163 - arag.agents.process - INFO - Generating process narrative for stage: query_rewriting
+2025-03-25 00:19:36,990 - arag.core.ai_client - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:19:36,990 - arag.agents.process - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:19:36,991 - arag.core.orchestrator - INFO - Query rewriting completed in 1.49s
+2025-03-25 00:19:36,991 - arag.core.orchestrator - INFO - Running Document Retrieval
+2025-03-25 00:19:36,991 - arag.core.vector_db - INFO - Batch querying vector DB with 3 queries
+2025-03-25 00:19:36,991 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct policy...
+2025-03-25 00:19:37,087 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:19:37,087 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:19:37,092 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:19:37,092 - arag.core.vector_db - INFO - Querying vector DB for: Google employee conduct guidelines...
+2025-03-25 00:19:37,118 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:19:37,118 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:19:37,123 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:19:37,123 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct rules...
+2025-03-25 00:19:37,149 - arag.core.vector_db - ERROR - Vector search error: _NearVectorQueryAsync.near_vector() got an unexpected keyword argument 'vector'
+2025-03-25 00:19:37,149 - arag.core.vector_db - WARNING - Vector search failed, falling back to BM25 text search
+2025-03-25 00:19:37,154 - arag.core.vector_db - INFO - Found 5 documents with text search
+2025-03-25 00:19:37,154 - arag.core.vector_db - INFO - Batch query returned 14 unique documents
+2025-03-25 00:19:37,154 - arag.agents.process - INFO - Generating process narrative for stage: document_retrieval
+2025-03-25 00:19:37,854 - arag.core.ai_client - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:19:37,854 - arag.agents.process - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:19:37,855 - arag.core.orchestrator - INFO - Document retrieval completed in 0.86s
+2025-03-25 00:19:37,855 - arag.core.orchestrator - INFO - Running Knowledge Agent
+2025-03-25 00:19:37,855 - arag.agents.knowledge_extractor - INFO - Extracting knowledge from 14 document chunks
+2025-03-25 00:19:40,456 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:46,494 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:54,514 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:19:57,196 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown
+2025-03-25 00:20:05,182 - arag.core.ai_client - WARNING - Failed to parse knowledge extraction result as JSON for document unknown

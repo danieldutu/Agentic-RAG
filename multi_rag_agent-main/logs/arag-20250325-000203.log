@@ -1,0 +1,349 @@
+2025-03-25 00:02:03,168 - root - INFO - Logging initialized with level INFO
+2025-03-25 00:02:03,168 - root - INFO - Log file: logs/arag-20250325-000203.log
+2025-03-25 00:02:03,168 - arag - INFO - [Session: 40beb969-fbea-4410-93b3-d8271ead3676] Processing query: What does the Google Code of Conduct say?
+2025-03-25 00:02:03,189 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-03-25 00:02:03,189 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-25 00:02:05,278 - arag.core.vector_db - INFO - Initialized sentence-transformers model
+2025-03-25 00:02:05,278 - arag.core.vector_db - INFO - Vector DB client initialized with base URL: http://localhost:8765
+2025-03-25 00:02:05,327 - httpx - INFO - HTTP Request: GET http://localhost:8765/v1/.well-known/openid-configuration "HTTP/1.1 404 Not Found"
+2025-03-25 00:02:05,338 - httpx - INFO - HTTP Request: GET http://localhost:8765/v1/meta "HTTP/1.1 200 OK"
+2025-03-25 00:02:05,458 - httpx - INFO - HTTP Request: GET https://pypi.org/pypi/weaviate-client/json "HTTP/1.1 200 OK"
+2025-03-25 00:02:05,498 - arag.core.vector_db - INFO - Connected to Weaviate at http://localhost:8765
+2025-03-25 00:02:05,498 - arag.core.ai_client - INFO - Google AI client initialized
+2025-03-25 00:02:05,498 - arag.core.vector_db - INFO - Performing health check for vector DB type: weaviate
+2025-03-25 00:02:05,500 - httpx - INFO - HTTP Request: GET http://localhost:8765/v1/.well-known/ready "HTTP/1.1 200 OK"
+2025-03-25 00:02:05,500 - arag.agents.query_rewriter - INFO - Query Rewriter Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.knowledge_extractor - INFO - Knowledge Extractor Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.missing_info - INFO - Missing Info Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.knowledge_gaps - INFO - Knowledge Gaps Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.decision - INFO - Decision Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.answer - INFO - Answer Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.evaluator - INFO - Evaluator Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.improver - INFO - Improver Agent initialized
+2025-03-25 00:02:05,500 - arag.agents.process - INFO - Process Agent initialized
+2025-03-25 00:02:05,500 - arag.core.orchestrator - INFO - Orchestrator initialized with all agents
+2025-03-25 00:02:05,501 - arag.core.memory - INFO - Memory initialized for session 40beb969-fbea-4410-93b3-d8271ead3676
+2025-03-25 00:02:05,501 - arag.agents.process - INFO - Generating process narrative for stage: initialization
+2025-03-25 00:02:06,671 - arag.core.ai_client - INFO - Generated process narrative for stage: initialization
+2025-03-25 00:02:06,672 - arag.agents.process - INFO - Generated process narrative for stage: initialization
+2025-03-25 00:02:06,672 - arag.core.orchestrator - INFO - Starting iteration 1/3
+2025-03-25 00:02:06,672 - arag.core.orchestrator - INFO - Running Query Rewriter Agent
+2025-03-25 00:02:06,672 - arag.agents.query_rewriter - INFO - Rewriting query: What does the Google Code of Conduct say?
+2025-03-25 00:02:07,415 - arag.core.ai_client - INFO - Generated 3 query variations
+2025-03-25 00:02:07,415 - arag.agents.query_rewriter - INFO - Generated 3 query variations
+2025-03-25 00:02:07,416 - arag.agents.process - INFO - Generating process narrative for stage: query_rewriting
+2025-03-25 00:02:08,410 - arag.core.ai_client - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:02:08,410 - arag.agents.process - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:02:08,410 - arag.core.orchestrator - INFO - Query rewriting completed in 1.74s
+2025-03-25 00:02:08,411 - arag.core.orchestrator - INFO - Running Document Retrieval
+2025-03-25 00:02:08,411 - arag.core.vector_db - INFO - Batch querying vector DB with 3 queries
+2025-03-25 00:02:08,411 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct...
+2025-03-25 00:02:08,703 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:08.701973+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:09,712 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:09.71177+02:00"}"
+>.
+2025-03-25 00:02:10,722 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:10.721697+02:00"}"
+>.
+2025-03-25 00:02:10,722 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:10,722 - arag.core.vector_db - INFO - Querying vector DB for: Google employee conduct policy...
+2025-03-25 00:02:10,767 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:10.767059+02:00"}"
+>.
+2025-03-25 00:02:11,778 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:11.778213+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:12,790 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:12.790014+02:00"}"
+>.
+2025-03-25 00:02:12,790 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:12,790 - arag.core.vector_db - INFO - Querying vector DB for: Google employee code of ethics...
+2025-03-25 00:02:12,906 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:12.906013+02:00"}"
+>.
+2025-03-25 00:02:13,919 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:13.918709+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:14,931 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:14.930942+02:00"}"
+>.
+2025-03-25 00:02:14,931 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:14,931 - arag.core.vector_db - INFO - Batch query returned 0 unique documents
+2025-03-25 00:02:14,931 - arag.agents.process - INFO - Generating process narrative for stage: document_retrieval
+2025-03-25 00:02:15,783 - arag.core.ai_client - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:02:15,783 - arag.agents.process - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:02:15,783 - arag.core.orchestrator - INFO - Document retrieval completed in 7.37s
+2025-03-25 00:02:15,784 - arag.core.orchestrator - INFO - Running Knowledge Agent
+2025-03-25 00:02:15,784 - arag.agents.knowledge_extractor - INFO - Extracting knowledge from 0 document chunks
+2025-03-25 00:02:15,784 - arag.agents.knowledge_extractor - INFO - Extracted 0 knowledge items
+2025-03-25 00:02:15,784 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_extraction
+2025-03-25 00:02:16,498 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:02:16,499 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:02:16,499 - arag.core.orchestrator - INFO - Knowledge extraction completed in 0.72s
+2025-03-25 00:02:16,499 - arag.core.orchestrator - INFO - Running Missing Info Agent
+2025-03-25 00:02:16,499 - arag.agents.missing_info - INFO - Identifying missing information in 0 knowledge items
+2025-03-25 00:02:18,037 - arag.core.ai_client - WARNING - Failed to parse missing info identification result as JSON
+2025-03-25 00:02:18,037 - arag.agents.missing_info - INFO - Identified 0 missing information references
+2025-03-25 00:02:18,037 - arag.agents.process - INFO - Generating process narrative for stage: missing_info
+2025-03-25 00:02:18,692 - arag.core.ai_client - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:02:18,692 - arag.agents.process - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:02:18,692 - arag.core.orchestrator - INFO - Missing info identification completed in 2.19s
+2025-03-25 00:02:18,692 - arag.core.orchestrator - INFO - Running Knowledge Gaps Agent
+2025-03-25 00:02:18,692 - arag.agents.knowledge_gaps - INFO - Identifying knowledge gaps in 0 knowledge items
+2025-03-25 00:02:25,289 - arag.core.ai_client - WARNING - Failed to parse knowledge gaps identification result as JSON
+2025-03-25 00:02:25,289 - arag.agents.knowledge_gaps - INFO - Identified 0 knowledge gaps with completeness score 0
+2025-03-25 00:02:25,289 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_gaps
+2025-03-25 00:02:26,126 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:02:26,127 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:02:26,127 - arag.core.orchestrator - INFO - Knowledge gap analysis completed in 7.43s
+2025-03-25 00:02:26,127 - arag.core.orchestrator - INFO - Running Decision Agent
+2025-03-25 00:02:26,127 - arag.agents.decision - INFO - Making decision at iteration 1/3
+2025-03-25 00:02:27,457 - arag.core.ai_client - WARNING - Failed to parse decision making result as JSON
+2025-03-25 00:02:27,458 - arag.agents.decision - INFO - Decision: continue with confidence 50
+2025-03-25 00:02:27,458 - arag.agents.process - INFO - Generating process narrative for stage: decision
+2025-03-25 00:02:28,243 - arag.core.ai_client - INFO - Generated process narrative for stage: decision
+2025-03-25 00:02:28,243 - arag.agents.process - INFO - Generated process narrative for stage: decision
+2025-03-25 00:02:28,243 - arag.core.orchestrator - INFO - Decision making completed in 2.12s
+2025-03-25 00:02:28,243 - arag.core.orchestrator - INFO - Starting iteration 2/3
+2025-03-25 00:02:28,243 - arag.core.orchestrator - INFO - Running Query Rewriter Agent
+2025-03-25 00:02:28,243 - arag.agents.query_rewriter - INFO - Rewriting query: What does the Google Code of Conduct say?
+2025-03-25 00:02:29,095 - arag.core.ai_client - INFO - Generated 3 query variations
+2025-03-25 00:02:29,095 - arag.agents.query_rewriter - INFO - Generated 3 query variations
+2025-03-25 00:02:29,095 - arag.agents.process - INFO - Generating process narrative for stage: query_rewriting
+2025-03-25 00:02:29,914 - arag.core.ai_client - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:02:29,914 - arag.agents.process - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:02:29,914 - arag.core.orchestrator - INFO - Query rewriting completed in 1.67s
+2025-03-25 00:02:29,915 - arag.core.orchestrator - INFO - Running Document Retrieval
+2025-03-25 00:02:29,915 - arag.core.vector_db - INFO - Batch querying vector DB with 3 queries
+2025-03-25 00:02:29,915 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct content...
+2025-03-25 00:02:29,966 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:29.965928+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:30,974 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:30.974379+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:31,984 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:31.98443+02:00"}"
+>.
+2025-03-25 00:02:31,985 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:31,985 - arag.core.vector_db - INFO - Querying vector DB for: Google employee Code of Conduct policy...
+2025-03-25 00:02:32,093 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:32.093258+02:00"}"
+>.
+2025-03-25 00:02:33,106 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:33.105879+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:34,119 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:34.11885+02:00"}"
+>.
+2025-03-25 00:02:34,119 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:34,120 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct rules and regulations...
+2025-03-25 00:02:34,526 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:34.525915+02:00"}"
+>.
+2025-03-25 00:02:35,534 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:35.534126+02:00"}"
+>.
+2025-03-25 00:02:36,544 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:36.54415+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:36,544 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:36,544 - arag.core.vector_db - INFO - Batch query returned 0 unique documents
+2025-03-25 00:02:36,544 - arag.agents.process - INFO - Generating process narrative for stage: document_retrieval
+2025-03-25 00:02:37,391 - arag.core.ai_client - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:02:37,391 - arag.agents.process - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:02:37,391 - arag.core.orchestrator - INFO - Document retrieval completed in 7.48s
+2025-03-25 00:02:37,392 - arag.core.orchestrator - INFO - Running Knowledge Agent
+2025-03-25 00:02:37,392 - arag.agents.knowledge_extractor - INFO - Extracting knowledge from 0 document chunks
+2025-03-25 00:02:37,392 - arag.agents.knowledge_extractor - INFO - Extracted 0 knowledge items
+2025-03-25 00:02:37,392 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_extraction
+2025-03-25 00:02:38,107 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:02:38,107 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:02:38,107 - arag.core.orchestrator - INFO - Knowledge extraction completed in 0.72s
+2025-03-25 00:02:38,107 - arag.core.orchestrator - INFO - Running Missing Info Agent
+2025-03-25 00:02:38,107 - arag.agents.missing_info - INFO - Identifying missing information in 0 knowledge items
+2025-03-25 00:02:39,618 - arag.core.ai_client - WARNING - Failed to parse missing info identification result as JSON
+2025-03-25 00:02:39,618 - arag.agents.missing_info - INFO - Identified 0 missing information references
+2025-03-25 00:02:39,618 - arag.agents.process - INFO - Generating process narrative for stage: missing_info
+2025-03-25 00:02:40,265 - arag.core.ai_client - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:02:40,265 - arag.agents.process - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:02:40,265 - arag.core.orchestrator - INFO - Missing info identification completed in 2.16s
+2025-03-25 00:02:40,265 - arag.core.orchestrator - INFO - Running Knowledge Gaps Agent
+2025-03-25 00:02:40,265 - arag.agents.knowledge_gaps - INFO - Identifying knowledge gaps in 0 knowledge items
+2025-03-25 00:02:47,221 - arag.core.ai_client - WARNING - Failed to parse knowledge gaps identification result as JSON
+2025-03-25 00:02:47,221 - arag.agents.knowledge_gaps - INFO - Identified 0 knowledge gaps with completeness score 0
+2025-03-25 00:02:47,221 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_gaps
+2025-03-25 00:02:48,041 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:02:48,041 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:02:48,041 - arag.core.orchestrator - INFO - Knowledge gap analysis completed in 7.78s
+2025-03-25 00:02:48,041 - arag.core.orchestrator - INFO - Running Decision Agent
+2025-03-25 00:02:48,041 - arag.agents.decision - INFO - Making decision at iteration 2/3
+2025-03-25 00:02:49,250 - arag.core.ai_client - WARNING - Failed to parse decision making result as JSON
+2025-03-25 00:02:49,250 - arag.agents.decision - INFO - Decision: continue with confidence 50
+2025-03-25 00:02:49,250 - arag.agents.process - INFO - Generating process narrative for stage: decision
+2025-03-25 00:02:50,088 - arag.core.ai_client - INFO - Generated process narrative for stage: decision
+2025-03-25 00:02:50,088 - arag.agents.process - INFO - Generated process narrative for stage: decision
+2025-03-25 00:02:50,088 - arag.core.orchestrator - INFO - Decision making completed in 2.05s
+2025-03-25 00:02:50,088 - arag.core.orchestrator - INFO - Starting iteration 3/3
+2025-03-25 00:02:50,089 - arag.core.orchestrator - INFO - Running Query Rewriter Agent
+2025-03-25 00:02:50,089 - arag.agents.query_rewriter - INFO - Rewriting query: What does the Google Code of Conduct say?
+2025-03-25 00:02:50,800 - arag.core.ai_client - INFO - Generated 3 query variations
+2025-03-25 00:02:50,801 - arag.agents.query_rewriter - INFO - Generated 3 query variations
+2025-03-25 00:02:50,801 - arag.agents.process - INFO - Generating process narrative for stage: query_rewriting
+2025-03-25 00:02:51,538 - arag.core.ai_client - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:02:51,539 - arag.agents.process - INFO - Generated process narrative for stage: query_rewriting
+2025-03-25 00:02:51,539 - arag.core.orchestrator - INFO - Query rewriting completed in 1.45s
+2025-03-25 00:02:51,539 - arag.core.orchestrator - INFO - Running Document Retrieval
+2025-03-25 00:02:51,539 - arag.core.vector_db - INFO - Batch querying vector DB with 3 queries
+2025-03-25 00:02:51,539 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct policy...
+2025-03-25 00:02:51,588 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:51.58808+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:52,599 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:52.599596+02:00"}"
+>.
+2025-03-25 00:02:53,610 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:53.609745+02:00"}"
+>.
+2025-03-25 00:02:53,613 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:53,613 - arag.core.vector_db - INFO - Querying vector DB for: Google employee conduct guidelines...
+2025-03-25 00:02:53,658 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:53.657972+02:00"}"
+>.
+2025-03-25 00:02:54,668 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:54.66825+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:55,678 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:55.677608+02:00"}"
+>.
+2025-03-25 00:02:55,678 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:55,678 - arag.core.vector_db - INFO - Querying vector DB for: Google Code of Conduct rules and regulations...
+2025-03-25 00:02:55,725 - arag.core.vector_db - ERROR - Weaviate query error (attempt 1): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:55.725482+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:56,736 - arag.core.vector_db - ERROR - Weaviate query error (attempt 2): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match", grpc_status:2, created_time:"2025-03-25T00:02:56.73593+02:00"}"
+>.
+2025-03-25 00:02:57,745 - arag.core.vector_db - ERROR - Weaviate query error (attempt 3): Query call with protocol GRPC search failed with message <AioRpcError of RPC that terminated with:
+	status = StatusCode.UNKNOWN
+	details = "explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don't match"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-25T00:02:57.745636+02:00", grpc_status:2, grpc_message:"explorer: get class: vector search: object vector search at index arag2: shard arag2_iLM6CFH7iQvU: vector search: knn search: distance between entrypoint and query node: 768 vs 384: vector lengths don\'t match"}"
+>.
+2025-03-25 00:02:57,746 - arag.core.vector_db - ERROR - Max retries (3) exceeded for Weaviate query
+2025-03-25 00:02:57,746 - arag.core.vector_db - INFO - Batch query returned 0 unique documents
+2025-03-25 00:02:57,746 - arag.agents.process - INFO - Generating process narrative for stage: document_retrieval
+2025-03-25 00:02:58,519 - arag.core.ai_client - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:02:58,519 - arag.agents.process - INFO - Generated process narrative for stage: document_retrieval
+2025-03-25 00:02:58,520 - arag.core.orchestrator - INFO - Document retrieval completed in 6.98s
+2025-03-25 00:02:58,520 - arag.core.orchestrator - INFO - Running Knowledge Agent
+2025-03-25 00:02:58,520 - arag.agents.knowledge_extractor - INFO - Extracting knowledge from 0 document chunks
+2025-03-25 00:02:58,520 - arag.agents.knowledge_extractor - INFO - Extracted 0 knowledge items
+2025-03-25 00:02:58,520 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_extraction
+2025-03-25 00:02:59,215 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:02:59,215 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_extraction
+2025-03-25 00:02:59,216 - arag.core.orchestrator - INFO - Knowledge extraction completed in 0.70s
+2025-03-25 00:02:59,216 - arag.core.orchestrator - INFO - Running Missing Info Agent
+2025-03-25 00:02:59,216 - arag.agents.missing_info - INFO - Identifying missing information in 0 knowledge items
+2025-03-25 00:03:00,535 - arag.core.ai_client - WARNING - Failed to parse missing info identification result as JSON
+2025-03-25 00:03:00,535 - arag.agents.missing_info - INFO - Identified 0 missing information references
+2025-03-25 00:03:00,535 - arag.agents.process - INFO - Generating process narrative for stage: missing_info
+2025-03-25 00:03:01,225 - arag.core.ai_client - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:03:01,225 - arag.agents.process - INFO - Generated process narrative for stage: missing_info
+2025-03-25 00:03:01,225 - arag.core.orchestrator - INFO - Missing info identification completed in 2.01s
+2025-03-25 00:03:01,225 - arag.core.orchestrator - INFO - Running Knowledge Gaps Agent
+2025-03-25 00:03:01,225 - arag.agents.knowledge_gaps - INFO - Identifying knowledge gaps in 0 knowledge items
+2025-03-25 00:03:08,214 - arag.core.ai_client - WARNING - Failed to parse knowledge gaps identification result as JSON
+2025-03-25 00:03:08,214 - arag.agents.knowledge_gaps - INFO - Identified 0 knowledge gaps with completeness score 0
+2025-03-25 00:03:08,214 - arag.agents.process - INFO - Generating process narrative for stage: knowledge_gaps
+2025-03-25 00:03:08,932 - arag.core.ai_client - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:03:08,933 - arag.agents.process - INFO - Generated process narrative for stage: knowledge_gaps
+2025-03-25 00:03:08,933 - arag.core.orchestrator - INFO - Knowledge gap analysis completed in 7.71s
+2025-03-25 00:03:08,933 - arag.core.orchestrator - INFO - Running Decision Agent
+2025-03-25 00:03:08,933 - arag.agents.decision - INFO - Making decision at iteration 3/3
+2025-03-25 00:03:10,181 - arag.core.ai_client - WARNING - Failed to parse decision making result as JSON
+2025-03-25 00:03:10,181 - arag.agents.decision - INFO - Decision: complete with confidence 50
+2025-03-25 00:03:10,181 - arag.agents.process - INFO - Generating process narrative for stage: decision
+2025-03-25 00:03:10,875 - arag.core.ai_client - INFO - Generated process narrative for stage: decision
+2025-03-25 00:03:10,876 - arag.agents.process - INFO - Generated process narrative for stage: decision
+2025-03-25 00:03:10,876 - arag.core.orchestrator - INFO - Decision making completed in 1.94s
+2025-03-25 00:03:10,876 - arag.core.orchestrator - INFO - Decision to complete after iteration 3
+2025-03-25 00:03:10,876 - arag.core.orchestrator - INFO - Running Answer Agent
+2025-03-25 00:03:10,876 - arag.agents.answer - INFO - Generating answer based on 0 knowledge items
+2025-03-25 00:03:17,329 - arag.core.ai_client - WARNING - Failed to parse answer generation result as JSON
+2025-03-25 00:03:17,330 - arag.agents.answer - INFO - Generated answer with 0 citations
+2025-03-25 00:03:17,330 - arag.agents.process - INFO - Generating process narrative for stage: answer_generation
+2025-03-25 00:03:18,043 - arag.core.ai_client - INFO - Generated process narrative for stage: answer_generation
+2025-03-25 00:03:18,043 - arag.agents.process - INFO - Generated process narrative for stage: answer_generation
+2025-03-25 00:03:18,044 - arag.core.orchestrator - INFO - Answer generation completed in 7.17s
+2025-03-25 00:03:18,044 - arag.core.orchestrator - INFO - Running Evaluator Agent
+2025-03-25 00:03:18,044 - arag.agents.evaluator - INFO - Evaluating answer of length 74
+2025-03-25 00:03:22,652 - arag.core.ai_client - WARNING - Failed to parse answer evaluation result as JSON
+2025-03-25 00:03:22,652 - arag.agents.evaluator - INFO - Evaluation complete with overall score: 5
+2025-03-25 00:03:22,652 - arag.agents.process - INFO - Generating process narrative for stage: evaluation
+2025-03-25 00:03:23,453 - arag.core.ai_client - INFO - Generated process narrative for stage: evaluation
+2025-03-25 00:03:23,453 - arag.agents.process - INFO - Generated process narrative for stage: evaluation
+2025-03-25 00:03:23,454 - arag.core.orchestrator - INFO - Answer evaluation completed in 5.41s
+2025-03-25 00:03:23,454 - arag.core.orchestrator - INFO - Running Improver Agent
+2025-03-25 00:03:23,454 - arag.agents.improver - INFO - Improving answer based on evaluation with 1 feedback items
+2025-03-25 00:03:32,994 - arag.core.ai_client - WARNING - Failed to parse answer improvement result as JSON
+2025-03-25 00:03:32,995 - arag.agents.improver - INFO - Improved answer with 0 improvements
+2025-03-25 00:03:32,995 - arag.agents.process - INFO - Generating process narrative for stage: improvement
+2025-03-25 00:03:33,609 - arag.core.ai_client - INFO - Generated process narrative for stage: improvement
+2025-03-25 00:03:33,609 - arag.agents.process - INFO - Generated process narrative for stage: improvement
+2025-03-25 00:03:33,609 - arag.core.orchestrator - INFO - Answer improvement completed in 10.16s
+2025-03-25 00:03:33,611 - arag.core.memory - INFO - Memory saved to output/memory-40beb969-fbea-4410-93b3-d8271ead3676-20250325-000333.json
+2025-03-25 00:03:33,611 - arag - INFO - [Session: 40beb969-fbea-4410-93b3-d8271ead3676] Query processed in 88.11s
